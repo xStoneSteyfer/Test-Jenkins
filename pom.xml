@@ -9,7 +9,7 @@
     <version>1.0.0</version>
     
     <properties>
-        <python.executable>python</python.executable>
+        <python.executable>python3</python.executable>
         <test.script>test.py</test.script>
     </properties>
     
