@@ -1,18 +1,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-         
+
     <modelVersion>4.0.0</modelVersion>
-    
+
     <groupId>com.example</groupId>
-    <artifactId>your-artifact-id</artifactId>
+    <artifactId>mon-projet</artifactId>
     <version>1.0.0</version>
-    
+
     <properties>
-        <python.executable>python3</python.executable>
-        <test.script>test.py</test.script>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-    
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant</artifactId>
+            <version>1.10.11</version>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -21,15 +30,15 @@
                 <version>3.0.0</version>
                 <executions>
                     <execution>
-                        <id>run-python-test</id>
+                        <id>run-python-tests</id>
                         <phase>test</phase>
                         <goals>
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <executable>${python.executable}</executable>
+                            <executable>python3</executable>
                             <arguments>
-                                <argument>${test.script}</argument>
+                                <argument>test.py</argument>
                             </arguments>
                         </configuration>
                     </execution>
