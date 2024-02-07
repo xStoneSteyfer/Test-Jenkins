@@ -12,3 +12,4 @@ class TestSum(unittest.TestCase):
 suite = unittest.TestLoader().loadTestsFromTestCase(TestSum)
 runner = xmlrunner.XMLTestRunner(output='test-reports')
 runner.run(suite)
+unittest.main()
