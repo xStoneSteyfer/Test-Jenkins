@@ -20,3 +20,5 @@ if __name__ == '__main__':
         print("Liste des tests échoués :")
         for test, traceback in result.failures:
             print(test)
+    
+    unittest.main()
