@@ -1,3 +1,4 @@
+import xmlrunner
 import unittest
 import main
 
@@ -8,4 +9,6 @@ class TestSum(unittest.TestCase):
     def test_sum_incorrect(self):
         self.assertEqual(main.sum(5, 5), 9, "Erreur: fonction sum")
 
-unittest.main()
+suite = unittest.TestLoader().loadTestsFromTestCase(TestSum)
+runner = xmlrunner.XMLTestRunner(output='test-reports')
+runner.run(suite)
